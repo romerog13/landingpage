@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymStyle Residence en Madrid</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: white;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(45deg, #111, #333);
+        }
+        .hero h1 {
+            font-size: 4em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+            color: #FFD700;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            background-color: #111;
+        }
+        .video-container, .info-container {
+            flex: 1;
+            min-width: 400px;
+            padding: 20px;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 315px;
+        }
+        .btn {
+            background-color: #ff007f;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.5em;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+        .section {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #222;
+        }
+        .packages {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .package {
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            margin: 20px;
+        }
+        .package h3 {
+            color: #FFD700;
+            font-size: 2em;
+        }
+        .subscribe-section input, .subscribe-section button, .subscribe-section select {
+            padding: 15px;
+            font-size: 1.2em;
+            margin: 10px;
+            width: 40%;
+            border-radius: 5px;
+            border: none;
+        }
+        .subscribe-section button {
+            background-color: #ff007f;
+            color: white;
+            cursor: pointer;
+            width: auto;
+        }
+        .footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1em;
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            .package {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>GymStyle Residence</h1>
+        <p>Más que una residencia: es un movimiento. Gimnasio de última generación, comedor premium y una comunidad élite para entusiastas del fitness en Madrid.</p>
+        <a href="#subscribe" class="btn">Más Información</a>
+    </div>
+    
+    <div class="content">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/pcghLZ9taRg" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="info-container">
+            <h2>Nuestra Ubicación</h2>
+            <p>📍 <b>Madrid, España</b> – Situados en el corazón de la ciudad, con fácil acceso a universidades y centros deportivos.</p>
+            <h2>Instalaciones</h2>
+            <p>✔ Gimnasio de última generación</p>
+            <p>✔ Comedor con opciones saludables</p>
+            <p>✔ Dormitorios modernos y cómodos</p>
+            <p>✔ Espacios de estudio y coworking</p>
+            <p>✔ Áreas sociales y de entretenimiento</p>
+            <p>✔ Seguridad 24/7</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Paquetes Exclusivos</h2>
+        <div class="packages">
+            <div class="package">
+                <h3>🏆 Estándar</h3>
+                <p>✔ Habitación compartida</p>
+                <p>✔ Acceso completo al gimnasio</p>
+                <p>✔ Plan de comidas saludables</p>
+                <p><b>Precio:</b> 800€/mes</p>
+            </div>
+            <div class="package">
+                <h3>💪 Premium</h3>
+                <p>✔ Habitación privada</p>
+                <p>✔ Membresía VIP del gimnasio</p>
+                <p>✔ Plan de nutrición personalizado</p>
+                <p><b>Precio:</b> 1.200€/mes</p>
+            </div>
+            <div class="package">
+                <h3>🔥 Elite</h3>
+                <p>✔ Suite VIP</p>
+                <p>✔ Acceso ilimitado al gimnasio</p>
+                <p>✔ Entrenador personal y coaching de bienestar</p>
+                <p><b>Precio:</b> 1.800€/mes</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="subscribe" class="subscribe-section">
+        <h2>Únete a la comunidad GymStyle</h2>
+        <p>Regístrate para recibir más información y acceso exclusivo a nuestras promociones.</p>
+        <form action="https://formspree.io/f/mqkrwvzl" method="POST">
+            <input type="text" name="name" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+            <select name="country_code" required>
+                <option value="">Selecciona Código de País</option>
+                <option value="+1">+1 (EE.UU.)</option>
+                <option value="+44">+44 (Reino Unido)</option>
+                <option value="+34">+34 (España)</option>
+                <option value="+57">+57 (Colombia)</option>
+                <option value="+49">+49 (Alemania)</option>
+                <option value="+33">+33 (Francia)</option>
+            </select>
+            <input type="tel" name="phone" placeholder="Tu Número de Teléfono" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 GymStyle Residence. Todos los derechos reservados.</p>
+    </div>
+</body>
+</html>
